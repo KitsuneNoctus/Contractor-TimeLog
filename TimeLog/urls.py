@@ -1,10 +1,9 @@
 from django.urls import path
-from TimeLog.views import *
+# from TimeLog.views import *
+from . import views
 
 
 urlpatterns = [
+    # path('',views.home,name='home'),
     path('classes.html', views.home),
-    # path('', PageListView.as_view(), name='wiki-list-page'),
-    # path('new/', PageCreateView.as_view(),name='new'),
-    # path('<str:slug>/', PageDetailView.as_view(), name='wiki-details-page'),
 ]

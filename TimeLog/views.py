@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
-class home():
-    pass
+def home(request):
+    # return render
+    # return('classes.html')
+    return HttpResponse(template.render('classes.html'))
+    

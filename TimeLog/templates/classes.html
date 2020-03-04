@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>The Home of it all.</p>
+    {% if classes %}
+        {% for class in  classes %}
+            {{ class.class_name }}
+        {% endfor %}
+    {% else %}
+     <p>No Classes!</p>
+    {% endif %}
 {% endblock %}

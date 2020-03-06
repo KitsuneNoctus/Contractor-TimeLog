@@ -3,6 +3,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.http import HttpResponse
 from django.template import loader
+from django.urls import reverse_lazy
 # Importing all models here
 from .models import *
 

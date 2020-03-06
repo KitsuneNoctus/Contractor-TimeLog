@@ -124,3 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# TimeLog app settings
+TIME_LOG_PAGE_TITLE_MAX_LENGTH = 600
+
+
+# PROTIP:
+# Need to override settings? Create a local_settings.py file
+# in this directory, and add settings there.
+try:
+    from makewiki.local_settings import *
+except ImportError:
+    pass

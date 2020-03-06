@@ -4,7 +4,7 @@
     <h3>Classes {% if classes %}<small class="text-muted">({{ classes|length }} Class{{ classes|length|pluralize:"es" }})</small>{% endif %}</h3>
     {% if classes %}
         <div class="card-columns">
-            {% for class in  classes %}
+            {% for s_class in  classes %}
                 {% include "partials/card.html" %}
             {% endfor %}
         </div>

@@ -26,27 +26,18 @@ class ClassListView(ListView):
           'classes': classes
         })
 
-# class ClassDetailView(DetailView):
-#     """ Renders a specific page based on it's slug."""
-#     model = Class
+class ClassDetailView(DetailView):
+    """ Renders a specific page based on it's slug."""
+    model = Class
 
-#     def get(self, request, slug):
-#         """ Returns a specific wiki page by slug. """
-#         class = self.get_queryset().get(slug__iexact=slug)
-#         return render(request, 'class_detail.html', {
-#           'class': class
-#         })
+    def get(self, request, slug):
+        """ Returns a specific Class page by slug. """
+        s_class = self.get_queryset().get(slug__iexact=slug)
+        return render(request, 'class_detail.html', {
+          's_class': s_class
+        })
 # ======================================================
 # Create your views here.
-def home(request):
-    classes = Class.objects.all()
-    # return render
-    # return('classes.html')
-    context = {'classes':classes}
-    return render(request,'classes.html', context)
-
-def detail(request):
-    return HttpResponse("You're looking at question .")
 
 # This is to ...
 class ClassCreateView(CreateView):

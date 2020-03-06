@@ -19,6 +19,9 @@ def home(request):
     context = {'classes':classes}
     return render(request,'classes.html', context)
 
+def detail(request):
+    return HttpResponse("You're looking at question .")
+
 # This is to ...
 class ClassCreateView(CreateView):
     ''' '''

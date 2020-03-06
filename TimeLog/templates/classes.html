@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h3>Classes {% if classes %}<small class="text-muted">({{ classes|length }} Class{{ classes|length|pluralize:"es" }})</small>{% endif %}</h3>
     {% if classes %}
-        {% for class in  classes %}
-            {{ class.class_name }}
-        {% endfor %}
+        <div class="card-columns">
+            {% for class in  classes %}
+                {% include "partials/card.html" %}
+            {% endfor %}
+        </div>
     {% else %}
-     <p>No Classes!</p>
+    <div class="alert alert-primary" role="alert">No Classes Available.</div>
     {% endif %}
 {% endblock %}

@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.http import HttpResponse
 from django.template import loader
+# Importing all models here
 from .models import *
 
 from django.utils.text import slugify
@@ -11,6 +14,29 @@ from django.views.generic import CreateView
 
 from .forms import ClassForm
 
+
+class ClassListView(ListView):
+    """ Renders a list of all Classes. """
+    model = Class
+
+    def get(self, request):
+        """ GET a list of Classes. """
+        classes = self.get_queryset().all()
+        return render(request, 'classes.html', {
+          'classes': classes
+        })
+
+# class ClassDetailView(DetailView):
+#     """ Renders a specific page based on it's slug."""
+#     model = Class
+
+#     def get(self, request, slug):
+#         """ Returns a specific wiki page by slug. """
+#         class = self.get_queryset().get(slug__iexact=slug)
+#         return render(request, 'class_detail.html', {
+#           'class': class
+#         })
+# ======================================================
 # Create your views here.
 def home(request):
     classes = Class.objects.all()

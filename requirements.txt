@@ -1,5 +1,4 @@
-Django==2.2.7
-pytz==2019.3
+django==2.2.7
 sqlparse==0.3.0
 djangorestframework
 gunicorn

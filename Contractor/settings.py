@@ -25,7 +25,7 @@ SECRET_KEY = 'l=b@jh^a)*4ukzm$%4353vg9lq2*($gf-9ds6)8_qc1zr#4r=w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','classtimelog.herokuapp.com']
 
 
 # Application definition
@@ -125,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # TimeLog app settings
 TIME_LOG_PAGE_TITLE_MAX_LENGTH = 600

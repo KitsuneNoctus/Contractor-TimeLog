@@ -3,7 +3,7 @@ from TimeLog.models import Class
 
 
 class ClassForm(forms.ModelForm):
-    """ Render and process a form based on the Page model. """
+    """ Render and process a form based on the Class model. """
     class Meta:
         model = Class
         fields = ['class_name','class_description','class_start_date','class_end_date']

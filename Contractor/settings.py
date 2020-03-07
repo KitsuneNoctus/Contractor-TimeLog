@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'TimeLog',
     'accounts',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [

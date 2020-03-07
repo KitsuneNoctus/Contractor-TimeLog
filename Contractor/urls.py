@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from TimeLog.views import *
 from accounts.views import *
+from api.views import *
 
 from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    path('api/', include('api.urls')),
     # Admin
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),

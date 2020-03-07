@@ -128,6 +128,11 @@ STATIC_URL = '/static/'
 # TimeLog app settings
 TIME_LOG_PAGE_TITLE_MAX_LENGTH = 600
 
+# Where to redirect during authentication
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+DEFAULT_LOGOUT_URL = '/'
+
 
 # PROTIP:
 # Need to override settings? Create a local_settings.py file

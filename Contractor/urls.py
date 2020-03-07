@@ -17,11 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from TimeLog.views import *
+from accounts.views import *
 
 from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    # Admin
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/signup/', SignUpView.as_view(), name="signup"),
+    #Class App
     path('', include('TimeLog.urls')),
 ]
